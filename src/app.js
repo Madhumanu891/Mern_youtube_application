@@ -17,4 +17,12 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" })); //To accept the 
 app.use(express.static("public")); //To accept the static file , pdf
 app.use(cookieParser());
 
+
+// routes
+import userRouter from "./routes/user.routes.js"
+
+
+// routes decleration
+app.use("/api/v1/users",userRouter)
+
 export { app };
